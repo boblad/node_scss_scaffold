@@ -1,0 +1,44 @@
+$colors: (
+  primary: rgb(24, 14, 7), //red
+  secondary: rgb(219, 199, 175), //pink
+  accent-1: rgb(245, 134, 32), //black
+  accent-2: rgb(117, 102, 91), //green
+  accent-3: rgb(180, 163, 130), //light grey
+  accent-4: rgb(233, 214, 190), //lighter grey
+  accent-5: rgb(255, 255, 255),
+  accent-6: rgb(194, 91, 16),
+  accent-7: rgb(107, 97, 84),
+  accent-8: rgb(178, 140, 103)
+);
+
+$breakpoints: (
+  phone: 400px,
+  phone-lg: 649px,
+  tablet: 767px,
+  tablet-lg: 991px,
+  desktop: 1300px
+);
+
+@function config($key) {
+  @if map-has-key($configs, $key) {
+    @return map-get($configs, $key);
+  }
+  @warn "unknown #{$key} in configs map";
+  @return null;
+}
+
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+  @warn "Unknown #{$key} in colors map";
+  @return null;
+}
+
+@function breakpoint($key) {
+  @if map-has-key($breakpoints, $key) {
+    @return map-get($breakpoints, $key);
+  }
+  @warn "Unknown #{$key} in breakpoints map";
+  @return null;
+}

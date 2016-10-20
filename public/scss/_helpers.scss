@@ -1,0 +1,52 @@
+.opaque {
+  opacity: 0 !important;
+}
+
+.restrict {
+  max-width: 1300px;
+}
+
+.pull--right {
+  float: right;
+}
+
+.pull--left {
+  float: left;
+}
+
+.node-clear:before,
+.node-clear:after {
+  content: " ";
+  display: table;
+}
+
+.node-clear:after {
+  clear: both;
+}
+
+.pull--left {
+  float: left !important;
+}
+
+.pull--right {
+  float: right !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.full-wrap {
+  width: 100%;
+  float: left;
+}
+
+.clear-margin {
+  margin: 0 !important;
+}
+
+.center-width {
+  width: 100%;
+  max-width: breakpoint(desktop);
+  margin: 0 auto;
+}
